@@ -1,0 +1,139 @@
+
+============================================================
+CYBER THREAT INTELLIGENCE - SOURCE ANALYSIS
+Analyzing daily article posting frequency...
+============================================================
+
+============================================================
+Analyzing: The Hacker News
+============================================================
+  [OK] Fetched 50 articles from RSS feed
+
+  ARTICLE STATISTICS:
+     Newest article: 2026-04-27 14:19
+     Oldest article: 2026-04-17 07:14
+     Date span: 10 days
+
+  LAST 24 HOURS: 6 articles
+  LAST 7 DAYS: 44 articles
+
+  DAILY AVERAGE:
+     Total articles in feed: 50
+     Average articles/day: 5.0
+
+  DAILY BREAKDOWN:
+     2026-04-20: 6 articles ######
+     2026-04-21: 8 articles ########
+     2026-04-22: 8 articles ########
+     2026-04-23: 8 articles ########
+     2026-04-24: 6 articles ######
+     2026-04-25: 2 articles ##
+     2026-04-27: 6 articles ######
+
+  ESTIMATED FREQUENCY: ~5 articles/day
+
+============================================================
+Analyzing: Cybersecurity News
+============================================================
+  [OK] Fetched 10 articles from RSS feed
+
+  ARTICLE STATISTICS:
+     Newest article: 2026-04-27 16:06
+     Oldest article: 2026-04-27 11:18
+     Date span: 0 days
+
+  LAST 24 HOURS: 10 articles
+  LAST 7 DAYS: 10 articles
+
+  DAILY AVERAGE:
+     Total articles in feed: 10
+     Average articles/day: 10
+
+  DAILY BREAKDOWN:
+     2026-04-27: 10 articles ##########
+
+  ESTIMATED FREQUENCY: ~10 articles/day
+
+============================================================
+Analyzing: Krebs on Security
+============================================================
+  [OK] Fetched 10 articles from RSS feed
+
+  ARTICLE STATISTICS:
+     Newest article: 2026-04-21 14:53
+     Oldest article: 2026-02-28 12:01
+     Date span: 52 days
+
+  LAST 24 HOURS: 0 articles
+  LAST 7 DAYS: 1 articles
+
+  DAILY AVERAGE:
+     Total articles in feed: 10
+     Average articles/day: 0.19
+
+  DAILY BREAKDOWN:
+     2026-03-11: 2 articles ##
+     2026-03-20: 1 articles #
+     2026-03-23: 1 articles #
+     2026-04-06: 1 articles #
+     2026-04-07: 1 articles #
+     2026-04-14: 1 articles #
+     2026-04-21: 1 articles #
+
+  ESTIMATED FREQUENCY: ~1 article every 5 days
+
+============================================================
+Analyzing: Bleeping Computer
+============================================================
+  [OK] Fetched 15 articles from RSS feed
+
+  ARTICLE STATISTICS:
+     Newest article: 2026-04-27 16:27
+     Oldest article: 2026-04-24 18:26
+     Date span: 2 days
+
+  LAST 24 HOURS: 8 articles
+  LAST 7 DAYS: 15 articles
+
+  DAILY AVERAGE:
+     Total articles in feed: 15
+     Average articles/day: 7.5
+
+  DAILY BREAKDOWN:
+     2026-04-24: 4 articles ####
+     2026-04-25: 2 articles ##
+     2026-04-26: 1 articles #
+     2026-04-27: 8 articles ########
+
+  ESTIMATED FREQUENCY: ~7 articles/day
+
+============================================================
+SUMMARY COMPARISON TABLE
+============================================================
+Source                     Daily Avg   Last 24h    Last 7d  Feed Size
+-----------------------------------------------------------------
+The Hacker News                 5.00          6         44         50
+Cybersecurity News             10.00         10         10         10
+Krebs on Security               0.19          0          1         10
+Bleeping Computer               7.50          8         15         15
+-----------------------------------------------------------------
+TOTAL ESTIMATED                22.69
+
+============================================================
+RECOMMENDATIONS:
+============================================================
+
+  By posting frequency (most to least active):
+  1. Cybersecurity News: ~10 articles/day
+  2. Bleeping Computer: ~7.5 articles/day
+  3. The Hacker News: ~5.0 articles/day
+  4. Krebs on Security: ~0.2 articles/day
+
+  Recommended scraping interval: Every 31 minutes
+     (to catch ~95% of new articles within 30 minutes of publishing)
+
+  Estimated database growth:
+     - Per day: ~23 articles
+     - Per month: ~681 articles
+     - Per year: ~8283 articles
+     (at current rates, without duplicates)

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Threat Intelligence Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🛡️ Cyber Threat Intelligence Platform</h1>
+            <p class="subtitle">Real-time Indian Cyber Space Monitoring</p>
+        </header>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search threats...">
+                <button onclick="searchThreats()">🔍 Search</button>
+            </div>
+
+            <div class="filters">
+                <select id="categoryFilter" onchange="filterThreats()">
+                    <option value="">All Categories</option>
+                    <option value="ransomware">Ransomware</option>
+                    <option value="phishing">Phishing</option>
+                    <option value="data_breach">Data Breach</option>
+                    <option value="ddos">DDoS</option>
+                    <option value="malware">Malware</option>
+                    <option value="vulnerability">Vulnerability</option>
+                </select>
+
+                <select id="severityFilter" onchange="filterThreats()">
+                    <option value="">All Severities</option>
+                    <option value="critical">Critical</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                    <option value="info">Info</option>
+                </select>
+
+                <label class="filter-label">
+                    <input type="checkbox" id="todayOnlyFilter" onchange="filterThreats()">
+                    <span class="check-icon">📅</span> Today's Threats
+                </label>
+
+                <label class="filter-label">
+                    <input type="checkbox" id="indiaOnlyFilter" onchange="filterThreats()">
+                    <span class="check-icon">🇮🇳</span> India-related only
+                </label>
+
+                <button onclick="scrapeNow()" class="scrape-btn">🔄 Scrape Now</button>
+            </div>
+        </div>
+
+        <!-- Stats Dashboard -->
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-card">
+                <h3 id="totalThreats">0</h3>
+                <p>Total Threats</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="indiaThreats">0</h3>
+                <p>India-Related</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="criticalThreats">0</h3>
+                <p>Critical Severity</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="todayThreats">0</h3>
+                <p>Today's Threats</p>
+            </div>
+        </div>
+
+        <!-- Threat Feed -->
+        <div class="threat-feed">
+            <h2> Threat Feed</h2>
+            <div id="threatList" class="threat-list">
+                <!-- Threats will be loaded here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!--  NEW: Chat Modal -->
+    <div id="chatModal" class="chat-modal">
+        <div class="chat-modal-content">
+            <div class="chat-modal-header">
+                <h3> Chat with AI about this Threat</h3>
+                <button class="chat-close-btn" onclick="closeChatModal()">&times;</button>
+            </div>
+            <div class="chat-modal-body">
+                <div id="chatMessages" class="chat-messages"></div>
+                <div class="chat-input-container">
+                    <input type="text" id="chatInput" placeholder="Ask a question about this threat..." />
+                    <button onclick="sendChatMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
